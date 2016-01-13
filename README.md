@@ -1,4 +1,4 @@
-# DocumentFilter
+# TextCategorization
 
 ## Description
 
@@ -6,7 +6,7 @@
 
 - 英語と日本語に対応
 - 不均衡データに対応
-- 評価に F 値を使用
+- 評価指標に F 値を使用
 
 ### Naive Bayes Classifier
 
@@ -19,28 +19,28 @@
 
 - 特徴量の複雑な関係を捕捉できない
 
-## Environments
+## Requirements
 
 - Python 3.5.0
 - mecab-python3 0.7
 - numpy 1.10.1
-- PyStemmer 1.3.0
 - pandas 0.17.0
+- PyStemmer 1.3.0
 - scikit-learn 0.17
 - Mecab 0.996
 
 ## Usage
 
 ```
-$ python3 tune.py LANG POS_LABEL TFILE EFILE
+$ python3 tune.py LANG POS_LABEL TFILE EFILE # 学習 (モデル選択)
 ```
 
 ```
-$ python3 predict.py IFILE EFILE OFILE
+$ python3 predict.py IFILE EFILE OFILE # 予測
 ```
 
-- POS_LABEL: 陽性ラベル
 - LANG: 言語
+- POS_LABEL: 陽性ラベル
 - TFILE:  訓練データ
 - EFILE: 分類器
 - IFILE: 入力データ
@@ -55,7 +55,7 @@ $ python3 predict.py IFILE EFILE OFILE
     - n_pos: 747
     - best F1 score: 0.934
 
-- [自作メンヘラデータセット](./trainingdata/menhera_dataset.tsv)
+- [自作メンヘラツイートデータセット](./trainingdata/menhera_dataset.tsv), 2015.
 
     - n: 573
     - n_neg: 89
