@@ -1,0 +1,45 @@
+         46162 function calls in 0.100 seconds
+
+   Ordered by: file name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       15    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:996(_handle_fromlist)
+     2826    0.003    0.000    0.013    0.000 function_base.py:4098(append)
+     1417    0.005    0.000    0.009    0.000 linalg.py:1976(norm)
+       25    0.000    0.000    0.000    0.000 linalg.py:106(_makearray)
+       25    0.000    0.000    0.000    0.000 linalg.py:209(_assertNdSquareness)
+       25    0.000    0.000    0.000    0.000 linalg.py:101(get_linalg_error_extobj)
+       25    0.000    0.000    0.000    0.000 linalg.py:124(_realType)
+       25    0.000    0.000    0.001    0.000 linalg.py:458(inv)
+       25    0.000    0.000    0.000    0.000 linalg.py:139(_commonType)
+     1467    0.001    0.000    0.001    0.000 linalg.py:111(isComplexType)
+       25    0.000    0.000    0.000    0.000 linalg.py:198(_assertRankAtLeast2)
+        1    0.033    0.033    0.091    0.091 minimize.py:4(gd)
+        1    0.000    0.000    0.001    0.001 minimize.py:97(bfgs)
+        1    0.000    0.000    0.001    0.001 minimize.py:148(lm)
+        1    0.003    0.003    0.007    0.007 minimize.py:43(cg)
+       15    0.000    0.000    0.000    0.000 numeric.py:2181(identity)
+     2826    0.002    0.000    0.003    0.000 numeric.py:476(asanyarray)
+     1442    0.001    0.000    0.001    0.000 numeric.py:406(asarray)
+     9208    0.020    0.000    0.020    0.000 plot_minimize.py:10(loss)
+        9    0.000    0.000    0.000    0.000 plot_minimize.py:25(hess)
+     1417    0.006    0.000    0.008    0.000 plot_minimize.py:16(grad)
+       15    0.000    0.000    0.000    0.000 twodim_base.py:192(eye)
+       25    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+       30    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+       25    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+        4    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+     1492    0.000    0.000    0.000    0.000 {built-in method builtins.issubclass}
+       25    0.000    0.000    0.000    0.000 {method 'astype' of 'numpy.ndarray' objects}
+     1417    0.001    0.000    0.001    0.000 {method 'ravel' of 'numpy.ndarray' objects}
+       15    0.000    0.000    0.000    0.000 {built-in method numpy.core.multiarray.zeros}
+     2826    0.007    0.000    0.007    0.000 {built-in method numpy.core.multiarray.concatenate}
+       25    0.000    0.000    0.000    0.000 {method '__array_prepare__' of 'numpy.ndarray' objects}
+     9422    0.008    0.000    0.008    0.000 {method 'dot' of 'numpy.ndarray' objects}
+       25    0.000    0.000    0.000    0.000 {built-in method builtins.min}
+       25    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+     1417    0.001    0.000    0.001    0.000 {built-in method numpy.core.multiarray.dot}
+     8528    0.008    0.000    0.008    0.000 {built-in method numpy.core.multiarray.array}
+       25    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+
+
