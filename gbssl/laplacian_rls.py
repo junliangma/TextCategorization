@@ -26,7 +26,6 @@ class BinaryLapRLSC(BaseEstimator, MRBinaryClassifierMixin):
             Graph Laplacian.
         """
 
-        self.X_               = X
         labeled               = y != 0
         y_labeled             = y[labeled]
         n_samples, n_features = X.shape

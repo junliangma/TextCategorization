@@ -11,7 +11,7 @@ class MRBinaryClassifierMixin(ClassifierMixin):
         self.gamma_k          = gamma_k
         self.p                = p
 
-    def predict(self, X):
+    def predict(self, X, Z):
         """Predict class labels for samples in X.
 
         Parameters
@@ -25,7 +25,7 @@ class MRBinaryClassifierMixin(ClassifierMixin):
             Predictions for input data.
         """
 
-        return rbf_kernel(X, self.X_, gamma=self.gamma_k) @ self.dual_coef_
+        return rbf_kernel(X, Z, gamma=self.gamma_k) @ self.dual_coef_
 
 
 class LMRBinaryClassifierMixin(ClassifierMixin):
@@ -36,7 +36,7 @@ class LMRBinaryClassifierMixin(ClassifierMixin):
         self.gamma_i          = gamma_i
         self.p                = p
 
-    def predict(self, X):
+    def predict(self, X, Z):
         """Predict class labels for samples in X.
 
         Parameters

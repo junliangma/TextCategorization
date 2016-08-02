@@ -18,10 +18,10 @@ def _fit_binary(estimator, X, y, L):
     return estimator.fit(X, y, L)
 
 
-def _predict_binary(estimator, X):
+def _predict_binary(estimator, X, Z):
     """Make predictions using a single binary estimator."""
 
-    return estimator.predict(X)
+    return estimator.predict(X, Z)
 
 
 class SemiSupervisedOneVsRestClassifier(BaseEstimator, ClassifierMixin):
@@ -108,7 +108,7 @@ class SemiSupervisedOneVsRestClassifier(BaseEstimator, ClassifierMixin):
         """
 
         Y                     = np.array([
-            _predict_binary(e, X) for e in self.estimators_
+            _predict_binary(e, X, self.X_) for e in self.estimators_
         ]).T
 
         return self.label_binarizer_.inverse_transform(Y)

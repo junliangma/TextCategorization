@@ -27,7 +27,6 @@ class BinaryLapSVC(BaseEstimator, MRBinaryClassifierMixin):
             Graph Laplacian.
         """
 
-        self.X_               = X
         labeled               = y != 0
         y_labeled             = y[labeled]
         n_samples, n_features = X.shape
@@ -40,6 +39,7 @@ class BinaryLapSVC(BaseEstimator, MRBinaryClassifierMixin):
             + 2 * self.gamma_i / n_samples**2 * L**self.p @ K
 
         # Construct the QP, invoke solver
+        solvers.options['show_progress'] = False
         sol                   = solvers.qp(
             P                 = matrix(Y @ J @ K @ LA.inv(M) @ J.T @ Y),
             q                 = matrix(-1 * np.ones(n_labeled_samples)),
